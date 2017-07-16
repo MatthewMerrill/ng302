@@ -9,7 +9,8 @@
 /node_modules
 
 # IDEs and editors
-/.idea
+.idea/
+*.iml
 .project
 .classpath
 .c9/
@@ -40,3 +41,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+firebase-key.json
+logs/

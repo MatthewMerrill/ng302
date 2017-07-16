@@ -9,9 +9,10 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        "404.html"
       ],
-      "index": "index.html",
+      "index": "admin.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
       "test": "test.ts",
