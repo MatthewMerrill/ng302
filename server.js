@@ -78,7 +78,6 @@ app.get('/:link', function (req, res, next) {
 
     linkRef.child(req.params.link.toLowerCase()).once('value').then(
       (snapshot) => {
-        console.log(`back from firebase!`);
         if (snapshot.exists()) {
           res.redirect(snapshot.val());
         }
