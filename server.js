@@ -45,6 +45,8 @@ const linkRef = admin.database().ref('links');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
+app.set('trust proxy', 'loopback')
+
 function logRequest(req) {
   var str = `${req.method} FROM ip=${req.ip} TO host="${req.hostname}" url="${req.originalUrl}"`;
 
