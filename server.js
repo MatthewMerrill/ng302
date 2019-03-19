@@ -74,7 +74,7 @@ app.use((req, res, next) => {
 app.get('/:link', function (req, res, next) {
   try {
     if (!req.params.link.match(/^[_a-z0-9]+$/i)) {
-      res.redirect('./404.html');
+      res.redirect('./404');
       return;
     }
 
@@ -82,6 +82,9 @@ app.get('/:link', function (req, res, next) {
       (snapshot) => {
         if (snapshot.exists()) {
           res.redirect(snapshot.val());
+        }
+        else if (req.params.link !== '404') {
+          res.redirect('./404');
         }
         else {
           res.redirect('./404.html');
